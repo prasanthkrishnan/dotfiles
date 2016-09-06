@@ -1,4 +1,42 @@
-syntax on
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+
+" let vundle manage vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" list all plugins that you'd like to install here
+Plugin 'kien/ctrlp.vim' " fuzzy find files
+Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+Plugin 'altercation/vim-colors-solarized' " Solarized color scheme
+Plugin 'derekwyatt/vim-scala' " basic scala syntax hightlight and filetype detection
+Plugin 'airblade/vim-gitgutter' " git gutter integration
+Plugin 'tpope/vim-fugitive' " the ultimate git helper
+
+call vundle#end()
 
 " Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+filetype plugin indent on
+
+" Solarized color scheme
+syntax enable
+set background=dark
+colorscheme solarized
+
+" Powerline status bar
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+" Always show statusline
+set laststatus=2
+set t_Co=256
+" line number and relative line number
+set number
+set relativenumber
+" search highlighting
+set hlsearch
+" ignore search
+set ignorecase
+"Show hidden files in NerdTree
+let NERDTreeShowHidden=1
+" OSx fix to yank and paste in vim
+set clipboard=unnamed

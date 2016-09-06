@@ -12,6 +12,10 @@ brew 'unrar'
 brew 'wget'
 brew 'python'
 
+#tmux
+brew 'tmux'
+# macvim
+brew 'macvim' , args: ['with-lua' 'with-override-system-vim']
 # Fish-like fast/unobtrusive autosuggestions for zsh.
 brew 'zsh-autosuggestions'
 # Fish shell like syntax highlighting for zsh
@@ -20,6 +24,8 @@ brew 'zsh-syntax-highlighting'
 brew 'zsh-completions'
 # Set of tools like n-history – multi-word history searcher, n-cd – directory bookmark manager, n-kill – htop like kill utility, and more
 brew 'zsh-navigation-tools'
+# Mac clipboard integration
+brew 'reattach-to-user-namespace'
 
 cask 'atom'
 cask 'firefox'
@@ -27,3 +33,6 @@ cask 'google-chrome'
 cask 'slack'
 cask 'transmission'
 cask 'vlc'
+cask 'iterm2'
+# Secure tunnels to localhost
+cask 'ngrok'

@@ -10,8 +10,9 @@ brew 'node'
 brew 'readline'
 brew 'unrar'
 brew 'wget'
-brew 'python'
 
+# python pip setuptools
+brew 'python'
 #tmux
 brew 'tmux'
 # macvim

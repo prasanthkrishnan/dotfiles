@@ -1,0 +1,16 @@
+{
+	"ext": {
+		"shell": {
+			"colorscheme": "default",
+			"theme": "multiline",
+			"local_themes": {
+				"continuation": "continuation",
+				"select": "select"
+			}
+		},
+		"tmux": {
+		"colorscheme": "default",
+		"theme": "custom"
+	}
+	}	
+}

@@ -141,7 +141,7 @@ install_dotfiles () {
 # symlink to ~/.config all files with *.configsymlink
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.configsymlink' -not -path '*.git*')
   do
-    dst="$CONFIG_ROOT/.$(basename "${src%.*}")"
+    dst="$CONFIG_ROOT/$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
 }

@@ -43,6 +43,8 @@ setopt COMPLETE_ALIASES
 
 zle -N newtab
 
+# Use vi key bindings
+bindkey -v
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line

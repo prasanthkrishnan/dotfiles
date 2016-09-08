@@ -3,6 +3,7 @@
 # Vundle setup
 #
 # Installs vundle from the git repository and installs vim plugins from vimrc
+ 
 if ! [ -d ~/.vim/bundle/Vundle.vim ]
 then
   echo " Installing vundle"

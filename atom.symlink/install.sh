@@ -7,10 +7,9 @@
 # Check for apm
 if test $(which apm)
 then
-  echo "  Installing atom packages"
-
-  if ! [ -f $ZSH/atom.symlink/packages.txt ]
+  if [ -f $ZSH/atom.symlink/packages.txt ]
   then
+    echo "  Installing atom packages"
     apm install --packages-file $ZSH/atom.symlink/packages.txt && apm update --no-confirm
   fi
 else

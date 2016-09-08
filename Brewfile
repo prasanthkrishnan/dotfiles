@@ -11,6 +11,7 @@ brew 'node'
 brew 'readline'
 brew 'unrar'
 brew 'wget'
+brew 'cowsay'
 
 # python pip setuptools
 brew 'python'

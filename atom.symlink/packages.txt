@@ -1,0 +1,5 @@
+ex-mode@0.13.0
+relative-numbers@0.5.1
+release-notes@0.53.0
+seti-ui@1.3.2
+vim-mode@0.65.1

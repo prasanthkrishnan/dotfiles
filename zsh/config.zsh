@@ -1,9 +1,3 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
-
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
@@ -15,6 +9,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+setopt AUTO_PUSHD #cd to act like pushd
+setopt PUSHD_IGNORE_DUPS #ignore dups in dir
+setopt PUSHDMINUS
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP
@@ -25,24 +22,39 @@ setopt SHARE_HISTORY # share history between sessions ???
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
 setopt CORRECT
-setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
+
+unsetopt MENU_COMPLETE   # do not autoselect the first completion entry
+unsetopt FLOWCONTROL  # output flow control via start/stop characters (usually assigned to ^S/^Q) is disabled in the shell’s editor
+setopt AUTO_MENU         # show completion menu on succesive tab press
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END # If a completion is performed with the cursor within a word, and a full completion is inserted, the cursor is moved to the end of the word
 
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
+setopt INTERACTIVECOMMENTS # recognize comments
+
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
-setopt complete_aliases
+setopt COMPLETE_ALIASES
 
-zle -N newtab
+# registering kill widget
+zle -N znt-kill-widget
+# registering cd widget
+zle -N znt-cd-widget
 
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
+# Use vi key bindings
+bindkey -v
+# rebinding ctrl + r to znt-history-widget after vi bindings
+bindkey -M viins '^r' znt-history-widget
+bindkey -M vicmd '^r' znt-history-widget
+# binding ctrl + o to znt-cd-widget
+bindkey -M viins '^o' znt-cd-widget
+bindkey -M vicmd '^o' znt-cd-widget
+
+# binding ctrl + k to znt-kill-widget
+bindkey -M viins '^k' znt-kill-widget
+bindkey -M vicmd '^k' znt-kill-widget

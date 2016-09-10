@@ -4,36 +4,38 @@ tap 'homebrew/bundle'
 
 brew 'ack'
 brew 'coreutils'
-brew 'go'
 brew 'grc'
 brew 'imagemagick'
-brew 'jp2a'
-brew 'libcaca', args: ['with-imlib2']
-brew 'libgit2'
 brew 'openssl'
 brew 'node'
 brew 'readline'
-brew 'postgresql'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'roundup'
-brew 'spaceman-diff'
-brew 'spark'
 brew 'unrar'
 brew 'wget'
-brew 'youtube-dl'
+brew 'cowsay'
 
-cask '1password'
-cask 'adium'
+# python pip setuptools
+brew 'python'
+#tmux
+brew 'tmux'
+# macvim
+brew 'macvim' , args: ['with-lua' 'with-override-system-vim']
+# Fish-like fast/unobtrusive autosuggestions for zsh.
+brew 'zsh-autosuggestions'
+# Fish shell like syntax highlighting for zsh
+brew 'zsh-syntax-highlighting'
+# Additional completion definitions for zsh
+brew 'zsh-completions'
+# Set of tools like n-history – multi-word history searcher, n-cd – directory bookmark manager, n-kill – htop like kill utility, and more
+brew 'zsh-navigation-tools'
+# Mac clipboard integration
+brew 'reattach-to-user-namespace'
+
 cask 'atom'
 cask 'firefox'
-cask 'garmin-express'
 cask 'google-chrome'
-cask 'handbrake'
-cask 'mapbox-studio'
-cask 'seashore'
 cask 'slack'
-cask 'steam'
 cask 'transmission'
-cask 'tunnelbear'
 cask 'vlc'
+cask 'iterm2'
+# Secure tunnels to localhost
+cask 'ngrok'

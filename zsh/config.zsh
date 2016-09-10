@@ -41,14 +41,20 @@ setopt INTERACTIVECOMMENTS # recognize comments
 #   like: git comm-[tab]
 setopt COMPLETE_ALIASES
 
-zle -N newtab
+# registering kill widget
+zle -N znt-kill-widget
+# registering cd widget
+zle -N znt-cd-widget
 
 # Use vi key bindings
 bindkey -v
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
+# rebinding ctrl + r to znt-history-widget after vi bindings
+bindkey -M viins '^r' znt-history-widget
+bindkey -M vicmd '^r' znt-history-widget
+# binding ctrl + o to znt-cd-widget
+bindkey -M viins '^o' znt-cd-widget
+bindkey -M vicmd '^o' znt-cd-widget
+
+# binding ctrl + k to znt-kill-widget
+bindkey -M viins '^k' znt-kill-widget
+bindkey -M vicmd '^k' znt-kill-widget

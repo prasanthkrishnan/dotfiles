@@ -12,6 +12,8 @@ brew 'readline'
 brew 'unrar'
 brew 'wget'
 brew 'cowsay'
+brew 'watch'
+brew 'tree'
 
 # python pip setuptools
 brew 'python'

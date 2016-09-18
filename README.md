@@ -15,6 +15,9 @@ forked dotfiles — say, "Java" — you can simply add a `java` directory and pu
 
 A lot of stuff. Check them out. [Fork it](https://github.com/prasanthkrishnan/dotfiles/fork), remove what you don't use, and build on what you do use.
 To name a few,
+
+<img src="https://raw.githubusercontent.com/prasanthkrishnan/dotfiles/gh-pages/dotfiles-cast-full.gif" /></a>
+
 - [Powerline](https://powerline.readthedocs.io/en/latest/): awesome python based zsh prompt, tmux & vim status bar.
 - Zsh plugins :  [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-navigation-tools](https://github.com/psprint/zsh-navigation-tools),
 [zsh-completions](https://github.com/zsh-users/zsh-completions)

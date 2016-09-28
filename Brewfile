@@ -31,6 +31,8 @@ brew 'zsh-completions'
 brew 'zsh-navigation-tools'
 # Mac clipboard integration
 brew 'reattach-to-user-namespace'
+#IRC client
+brew 'irssi'
 
 cask 'atom'
 cask 'firefox'

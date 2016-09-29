@@ -2,7 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
-brew 'ack'
+brew 'ag'
 brew 'coreutils'
 brew 'grc'
 brew 'imagemagick'

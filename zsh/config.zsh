@@ -58,3 +58,6 @@ bindkey -M vicmd '^o' znt-cd-widget
 # binding ctrl + k to znt-kill-widget
 bindkey -M viins '^k' znt-kill-widget
 bindkey -M vicmd '^k' znt-kill-widget
+
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word

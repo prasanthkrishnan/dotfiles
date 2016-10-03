@@ -12,6 +12,12 @@ bind-key - split-window -v
 # make the first window number start at 1
 set -g base-index 1
 
+# keybindings to switch using hjkl
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
 # keybindings to make resizing easier
 bind -r C-h resize-pane -L
 bind -r C-j resize-pane -D

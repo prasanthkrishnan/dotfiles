@@ -59,7 +59,6 @@ Temporary Items
 
 # IntelliJ
 /out/
-
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
@@ -72,6 +71,8 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-# misc
+# misc, feel free to remove them.
 .idea/
+*.iml
 build
+var/output/logs

@@ -15,6 +15,8 @@ brew 'wget'
 brew 'cowsay'
 brew 'watch'
 brew 'tree'
+brew 'fasd'
+brew 'redis'
 
 # python pip setuptools
 brew 'python'

@@ -17,6 +17,8 @@ brew 'watch'
 brew 'tree'
 brew 'fasd'
 brew 'redis'
+# Used by spacemacs spell-checking
+brew 'ispell'
 
 # python pip setuptools
 brew 'python'

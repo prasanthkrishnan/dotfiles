@@ -1,4 +1,4 @@
-#run-shell "powerline-daemon -q"
+run-shell "powerline-daemon -q"
 #tmux to support 256 colors
 set -g default-terminal "screen-256color"
 

@@ -3,5 +3,7 @@ autosuggestions=$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.z
 
 if test -f $autosuggestions
 then
+  ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=10
   source $autosuggestions
+  ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=10
 fi

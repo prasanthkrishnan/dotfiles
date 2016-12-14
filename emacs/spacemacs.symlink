@@ -332,6 +332,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq magit-repository-directories '("~/workplace"))
+  ;; evil fix so that viw -> p pastes text that is copied outside emacs
+  (fset 'evil-visual-update-x-selection 'ignore)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

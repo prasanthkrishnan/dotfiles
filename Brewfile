@@ -38,6 +38,8 @@ brew 'zsh-navigation-tools'
 brew 'reattach-to-user-namespace'
 #IRC client
 brew 'irssi'
+#jdk management
+brew 'jenv'
 
 cask 'atom'
 cask 'firefox'

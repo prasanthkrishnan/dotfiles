@@ -1,0 +1,59 @@
+let mapleader = ' '
+ 
+set number
+set relativenumber
+set incsearch hlsearch
+set ignorecase smartcase
+set clipboard=unnamed
+set scrolloff=5
+set showmode
+set surround
+ 
+inoremap fd <Esc>
+vnoremap fd <Esc>
+ 
+noremap  <c-f> <c-d>
+noremap  <c-b> <c-u>
+ 
+nnoremap Y y$
+ 
+nnoremap <c-w><c-c> :action VimWindowClose<cr>
+ 
+nnoremap [c :action VcsShowPrevChangeMarker<cr>
+nnoremap ]c :action VcsShowNextChangeMarker<cr>
+ 
+nnoremap [d :action QuickImplementations<cr>
+nnoremap ]d :action QuickImplementations<cr>
+ 
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
+ 
+nnoremap gcc :action CommentByLineComment<cr>
+ 
+nnoremap <leader>ff :action FindInPath<cr>
+nnoremap <leader>fu :action FindUsages<cr>
+nnoremap <leader>su :action ShowUsages<cr>
+nnoremap <leader>cv :action ChangeView<cr>
+nnoremap <leader>bb :action ToggleLineBreakpoint<cr>
+nnoremap <leader>br :action ViewBreakpoints<cr>
+nnoremap <leader>ic :action InspectCode<cr>
+nnoremap <leader>oi :action OptimizeImports<cr>
+nnoremap <leader>re :action RenameElement<cr>
+nnoremap <leader>rf :action RenameFile<cr>
+nnoremap <leader>rc :action ReformatCode<cr>
+nnoremap <leader>ra :action RearrangeCode<cr>
+nnoremap <leader>dd :action Debug<cr>
+nnoremap <leader>cdc :action ChooseDebugConfiguration<cr>
+nnoremap <leader>rr :action Run<cr>
+nnoremap <leader>crc :action ChooseRunConfiguration<cr>
+nnoremap <leader>ga :action GotoAction<cr>
+nnoremap <leader>gi :action GotoImplementation<cr>
+nnoremap <leader>gs :action GotoSuperMethod<cr>
+nnoremap <leader>gd :action GotoDeclaration<cr>
+nnoremap <leader>gt :action GotoTest<cr>
+nnoremap <leader>gr :action GotoRelated<cr>
+nnoremap <leader>gb :action Annotate<cr>
+" ACE Jump actions
+nnoremap <leader>jf :action AceAction<CR>
+nnoremap <leader>jt :action AceTargetAction<CR>
+nnoremap <leader>jl :action AceLineAction<CR>

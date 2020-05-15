@@ -32,3 +32,9 @@ setw -g mode-keys vi
 
 # Mouse mode on ; resize using mouse ; selet pane and window using mouse
 set -g mouse on
+
+# Dont rename windows with cmd name run within the window
+set-option -g allow-rename off
+
+# scroll back history
+set -g history-limit 16384

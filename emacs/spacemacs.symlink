@@ -76,7 +76,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(yasnippet-snippets flycheck-inline)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -345,7 +345,8 @@ you should place your code here."
             ("BLOCKED" . ((,class (:weight bold :box (:line-width 1 :color "#7e7f00") :foreground "#7e7f00" :background "#feffb2"))))
             ))
     )
-
+  (with-eval-after-load 'flycheck
+    (add-hook 'flycheck-mode-hook #'flycheck-inline-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -151,11 +151,11 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(solarized-dark
+   dotspacemacs-themes '(leuven
+                         solarized-dark
                          solarized-light
                          spacemacs-dark
                          spacemacs-light
-                         leuven
                          monokai
                          zenburn)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -334,6 +334,18 @@ you should place your code here."
   (setq magit-repository-directories '("~/workplace"))
   ;; evil fix so that viw -> p pastes text that is copied outside emacs
   (fset 'evil-visual-update-x-selection 'ignore)
+  ;; Org mode 
+  (setq org-startup-indented t)
+  (with-eval-after-load 'org
+    (setq org-element-use-cache nil)
+    (setq org-log-into-drawer t)
+    (setq org-todo-keywords '((sequence "TODO" "IN_PROGRESS(i!)" "BLOCKED(b@/!)" "|" "DONE(d@)" "DELEGATED(e@)" "CANCELED(c@)")))
+    (setq org-todo-keyword-faces
+          '(("IN_PROGRESS" . ((,class (:weight bold :box (:line-width 1 :color "#007f00") :foreground "#007f00" :background "#ccffcc"))))
+            ("BLOCKED" . ((,class (:weight bold :box (:line-width 1 :color "#7e7f00") :foreground "#7e7f00" :background "#feffb2"))))
+            ))
+    )
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

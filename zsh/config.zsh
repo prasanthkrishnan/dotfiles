@@ -45,6 +45,9 @@ setopt COMPLETE_ALIASES
 zle -N znt-kill-widget
 # registering cd widget
 zle -N znt-cd-widget
+# register opening #EDITOR for editing long commands
+autoload -U edit-command-line
+zle -N edit-command-line
 
 # Use vi key bindings
 bindkey -v
@@ -61,3 +64,6 @@ bindkey -M vicmd '^k' znt-kill-widget
 
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
+
+# open $EDITOR to edit command line
+bindkey -M vicmd v edit-command-line
